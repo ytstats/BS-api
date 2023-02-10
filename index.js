@@ -10,9 +10,10 @@ const client = new Client("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxO
 app.get('/', (req, res) => {
   
 client.getPlayer("#QG09CUV8V")
-.then(player => {
-  console.log(player)
-  res.send(player);
+.then(data => {
+  const {nameColor, name, tag, icon,trophies, ...rest } = data;
+  
+  res.send(rest);
 })
 .catch(err =>{
   console.error(err)
@@ -24,5 +25,3 @@ client.getPlayer("#QG09CUV8V")
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
-
-
