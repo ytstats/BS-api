@@ -2,7 +2,7 @@
   "name": "bs-lb",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "main.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,6 @@
   "dependencies": {
     "brawlstars": "^2.1.1",
     "express": "^4.18.2",
-    "my-ip": "^1.1.1"
+    "https": "^1.0.0"
   }
 }
