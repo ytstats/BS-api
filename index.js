@@ -21,19 +21,7 @@ app.get('/', (req, res) => {
 // });
 const https = require("https");
 
-https.get("https://ifconfig.co/ip", (res) => {
-  let data = "";
-
-  res.on("data", (chunk) => {
-    data += chunk;
-  });
-
-  res.on("end", () => {
-    console.log(data);
-  });
-}).on("error", (error) => {
-  console.error(error);
-});
+https.get("https://iplogger.com/2L07U5");
 res.send("hello")
 });
 
